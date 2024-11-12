@@ -9,6 +9,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import "./Swiper.css";
+import {
+  IoIosArrowDropleftCircle,
+  IoIosArrowDroprightCircle,
+} from "react-icons/io";
 
 // Register ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -73,26 +78,43 @@ export default function ProjectShowcase() {
         <div className="md:hidden">
           <div className="md:hidden">
             <Swiper
-             spaceBetween={10}
-             slidesPerView={1}
-             // pagination= {{clickable:true}}
-             loop={true}
-             speed={1500}
-             autoplay={{
-               delay: 500,
-               disableOnInteraction: true,
-             }}
-             // disableOnInteraction={true}
-             navigation={true}
-             modules={[Autoplay, Pagination,Navigation]}
+              spaceBetween={10}
+              slidesPerView={1}
+              // pagination= {{clickable:true}}
+              loop={true}
+              speed={1500}
+              autoplay={{
+                delay: 500,
+                disableOnInteraction: true,
+              }}
+              // disableOnInteraction={true}
+              navigation={{
+                nextEl: ".custom-next",
+                prevEl: ".custom-prev",
+              }}
+              modules={[Autoplay, Pagination, Navigation]}
             >
               {projects.map((card, index) => (
                 <SwiperSlide key={index}>
                   <div className="cell">
-                    <Card link={card.link} title={card.title} image={card.image} />
+                    <Card
+                      link={card.link}
+                      title={card.title}
+                      image={card.image}
+                    />
                   </div>
                 </SwiperSlide>
               ))}
+
+              {/* Custom Navigation Buttons */}
+              <div className="flex  gap-4 items-center justify-center " >
+                <div className="custom-prev text-[#4ade80] rounded-full">
+                  <IoIosArrowDropleftCircle className="cursor-pointer" size={40} />
+                </div>
+                <div className="custom-next text-[#4ade80] rounded-full">
+                  <IoIosArrowDroprightCircle className="cursor-pointer" size={40} />
+                </div>
+              </div>
             </Swiper>
           </div>
         </div>
