@@ -7,92 +7,86 @@ import Button from "./shared/Button";
 const projects = [
     {
         id: 1,
-        title: "RosettaBooks",
+        title: "Bloomberg",
+        link:"https://www.bloomberg.com/asia",
         image: "/recent_project1.png",
         category: "React JS",
         technologies: [
             "React",
-            "Next.js",
-            "Typescript",
-            "Nest.js",
-            "PostgreSQL",
-            "Tailwindcss",
+            "Redux",
+            "Nginx",
         ],
     },
     {
         id: 2,
-        title: "Restaurant App",
+        title: "Electrodeart",
+        link: "https://www.electrodeart.com/",
         image: "/recent_project2.png",
         category: "React JS",
         technologies: [
             "React",
-            "Next.js",
-            "Typescript",
-            "PostgreSQL",
-            "Tailwindcss",
-            "Nest.js",
+            "Redux",
+            "GSAP",
+            "Three.js"
         ],
     },
     {
         id: 3,
-        title: "Donation app",
+        title: "Frill",
+        link:"https://frill.co/",
         image: "/recent_project3.png",
         category: "React JS",
         technologies: [
             "React",
-            "Next.js",
-            "Typescript",
-            "PostgreSQL",
-            "Tailwindcss",
-            "Nest.js",
+            "Redux",
+            "Preact",
+            "Tailwind CSS"
         ],
     },
     {
         id: 4,
-        title: "Flickr blog",
+        title: "Cal",
+        link: "https://cal.com/",
         image: "/recent_project4.png",
         category: "React JS",
         technologies: [
             "React",
-            "Next.js",
-            "Typescript",
-            "Nest.js",
-            "PostgreSQL",
-            "Tailwindcss",
+            "Redux",
+            "GSAP",
+            "Radix UI"
         ],
     },
     {
         id: 5,
-        title: "Blog Website",
+        title: "Metamins",
+        link:"https://metamins.com/",
         image: "/recent_project5.png",
-        category: "React JS",
+        category: "Wordpress",
         technologies: [
-            "React",
-            "Next.js",
-            "Typescript",
-            "Nest.js",
-            "PostgreSQL",
-            "Tailwindcss",
+         "Wordpress",
+         "Yoast SEO",
+         "jQuery",
+         "MySQL",
+         "Nginx"
         ],
     },
     {
         id: 6,
-        title: "Crack hoodie shop",
+        title: "Fluvius",
+        link: "https://fluvius.co/",
         image: "/recent_project6.png",
-        category: "React JS",
+        category: "Wordpress",
         technologies: [
-            "React",
-            "Next.js",
-            "Typescript",
-            "Nest.js",
-            "PostgreSQL",
-            "Tailwindcss",
+            "Wordpress",
+            "jQuery",
+            "PHP",
+            "Nginx",
         ],
     },
 ];
 const FilterButton = ({ label, isActive, onClick }) => (
     <button
-        className={`px-6 py-3 text-nowrap rounded-full text-xs md:text-sm font-medium ${isActive ? "bg-orange-500 text-white" : "bg-gray-700 text-white"
+        className={`px-6 py-3 text-nowrap rounded-full text-xs md:text-sm font-medium ${isActive ? "bg-[#00e676] text-white" : "bg-gray-700 text-white"
             }`}
         onClick={onClick}
     >
@@ -121,7 +115,7 @@ export default function ProjectShowcase() {
         <div ref={containerRef} className="bg-black text-white py-8 md:py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-[1120px] mx-auto">
                 <div className="flex space-x-4 mb-12 overflow-x-auto">
-                    {["All", "Laravel", "React JS", "Wordpress"].map(
+                    {["All", "React JS", "Wordpress"].map(
                         (category) => (
                             <FilterButton
                                 key={category}
