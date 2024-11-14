@@ -8,8 +8,8 @@ import Card from "./Card";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
+// import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "./Swiper.css";
 import {
   IoIosArrowDropleftCircle,
   IoIosArrowDroprightCircle,
@@ -23,39 +23,63 @@ export default function ProjectShowcase() {
   const projects = [
     {
       id: 1,
-      title: "Bloomberg",
-      link: "https://www.bloomberg.com/asia",
+      title: "Lugz",
+      link: "https://lugz.com/",
       image: "/recent_project1.png",
     },
     {
       id: 2,
-      title: "Electrodeart",
-      link: "https://www.electrodeart.com/",
+      title: "Playstation",
+      link: "https://blog.playstation.com/",
       image: "/recent_project2.png",
     },
     {
       id: 3,
-      title: "Frill",
-      link: "https://frill.co/",
+      title: "Pinchofyum",
+      link: "https://pinchofyum.com/",
       image: "/recent_project3.png",
     },
     {
       id: 4,
-      title: "Cal",
-      link: "https://cal.com/",
+      title: "Walnut",
+      link: "https://www.walnut.io/",
       image: "/recent_project4.png",
     },
     {
       id: 5,
-      title: "Metamins",
-      link: "https://metamins.com/",
+      title: "Academyselfdefense",
+      link: "https://academyselfdefense.com/",
       image: "/recent_project5.png",
     },
     {
       id: 6,
-      title: "Fluvius",
-      link: "https://fluvius.co/",
+      title: "Eden-grow",
+      link: "hhttps://www.eden-grow.de/",
       image: "/recent_project6.png",
+    },
+    {
+      id: 7,
+      title: "Bilberrry",
+      link: "https://bilberrry.com/",
+      image: "/recent_project7.png",
+    },
+    {
+      id: 8,
+      title: "Skysys",
+      link: "https://myskysys.com/",
+      image: "/recent_project8.png",
+    },
+    {
+      id: 9,
+      title: "Sacballet",
+      link: "https://www.sacballet.org/",
+      image: "/recent_project9.png",
+    },
+    {
+      id: 10,
+      title: "WebXd",
+      link: "https://webxd.net/",
+      image: "/recent_project10.png",
     },
   ];
   return (
@@ -98,8 +122,8 @@ export default function ProjectShowcase() {
                 <SwiperSlide key={index}>
                   <div className="cell">
                     <Card
-                      link={card.link}
                       title={card.title}
+                      link={card.link}
                       image={card.image}
                     />
                   </div>
@@ -107,12 +131,18 @@ export default function ProjectShowcase() {
               ))}
 
               {/* Custom Navigation Buttons */}
-              <div className="flex  gap-4 items-center justify-center " >
+              <div className="flex  gap-4 items-center justify-center ">
                 <div className="custom-prev text-[#4ade80] rounded-full">
-                  <IoIosArrowDropleftCircle className="cursor-pointer" size={40} />
+                  <IoIosArrowDropleftCircle
+                    className="cursor-pointer"
+                    size={40}
+                  />
                 </div>
                 <div className="custom-next text-[#4ade80] rounded-full">
-                  <IoIosArrowDroprightCircle className="cursor-pointer" size={40} />
+                  <IoIosArrowDroprightCircle
+                    className="cursor-pointer"
+                    size={40}
+                  />
                 </div>
               </div>
             </Swiper>
